@@ -10,5 +10,13 @@
 }
 
 .container {
-    font-size: .75vw;
+    font-size: 2vh;
+}
+
+#password-confirm {
+  margin-bottom: 1.5em;
+}
+
+.h2 {
+  font-size: 1vh;
 }
