@@ -1,22 +1,33 @@
 .align-items-center {
-  -ms-flex-align: center !important;
-  align-items: center !important;
+  -ms-flex-align: center;
+  align-items: center;
   margin: auto;
   width: 50%;
-  padding: 10px;
   align-content: center;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .container {
     font-size: 2vh;
+    padding: 0px !important;
 }
-
-#password-confirm {
-  margin-bottom: 1.5em;
-}
-
 .h2 {
   font-size: 1vh;
+}
+
+.btn-primary {
+  margin-top: 1em;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.nav {
+  margin-top: 1em !important;
+}
+
+label {
+  font-size: 2vh;
 }

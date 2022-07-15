@@ -5,24 +5,41 @@ import "./App.css";
 import { AuthProvider } from "./contexts/AuthContext";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Dashboard from "./Dashboard";
+import Login from "./Login";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PrivateRoute from "./PrivateRoute";
+import ForgotPassword from "./ForgotPassword";
+import UpdateProfile from "./UpdateProfile";
+import Navbar from "./Navbar";
 
 function App() {
   return (
-    
-    <Container className="d-flex align-items-center"
-    style={{ minHeight: "100vh"}}>
-      <div className="w-100" style={{maxWidth: '30rem', maxHeight: ''}}>
-        <Router>
-          <AuthProvider>
-            <Routes>
-              <Route exact path="/" element={<Dashboard/>} />
-              <Route path="/signup" element={<Signup/>}/>
-            </Routes>
-          </AuthProvider>
-        </Router>
-      </div>
-    </Container>
-    
+
+    <div className="App">
+      <Router>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Navbar/>} />
+          </Routes>
+        </AuthProvider>
+      </Router> 
+      <Container className="d-flex align-items-center"
+      style={{ minHeight: "100vh"}}>
+        <div className="w-100" style={{maxWidth: '30rem', maxHeight: ''}}>
+          <Router>
+            <AuthProvider>
+              <Routes>
+                <Route exact path="/" element={<PrivateRoute><Dashboard/></PrivateRoute>} />
+                <Route exact path="/update-profile" element={<PrivateRoute><UpdateProfile/></PrivateRoute>} />
+                <Route path="/signup" element={<Signup/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path='/forgot-password' element={<ForgotPassword/>}/>
+              </Routes>
+            </AuthProvider>
+          </Router>
+        </div>
+      </Container>
+    </div>
   )
 }
 
