@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import Navbar from "./Navbar";
+import ProjectDashboard from "./ProjectDashboard";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path='/forgot-password' element={<ForgotPassword/>}/>
+                <Route path='/project-dashboard' element={<ProjectDashboard/>}/>
               </Routes>
             </AuthProvider>
           </Router>
