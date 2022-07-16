@@ -31,3 +31,66 @@ a {
 label {
   font-size: 2vh;
 }
+
+.test {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.project-summary {
+  min-width: 40rem !important; 
+}
+
+.d-flex {
+  display: flex;
+  justify-content: left !important;
+  max-width: 100% !important;
+}
+
+.shift-right {
+  position: absolute !important;
+  left: 45vw !important;  
+  right: 45vw !important;
+  width: 15% !important;
+  top: 15vh !important;
+}
+
+.shift-right-2 {
+  position: fixed !important;
+  left: 0vw !important;
+  right: 20vw !important;
+  bottom: 70vh;
+}
+
+.shift-more {
+  position: relative !important;
+  left: 38vw;
+  bottom: -40vh;
+}
+
+.Center {
+  position: fixed !important;
+  left: 42.25vw !important;
+  right: 30vw !important;
+  width: 15% !important;
+}
+
+.increase-width {
+  width: 100% !important;
+}
+
+.dashboard {
+  position: fixed !important;
+  left: 0vw !important;
+  right: 0vw !important;
+  top: 0vh !important;
+  bottom: 0vh !important;
+  justify-content: center !important;
+}

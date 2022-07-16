@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {Card, Button, Alert, Container} from 'react-bootstrap';
 import {useAuth} from './contexts/AuthContext';
 import {Link, useNavigate} from 'react-router-dom';
+import ListProjects from './ListProjects';
+import AddProject from './AddProject';
 
 export default function Dashboard() {
   const [error, setError] = useState(null);
@@ -21,8 +23,10 @@ export default function Dashboard() {
 
   return (
     <>
-      <Container className="d-flex align-items-center">
-        <Card>
+    <div className="test2 text-center mt-2"> 
+      <Container className="align-items-center">
+        <ListProjects></ListProjects>
+        <Card className='test'>
           <Card.Body>
             {error && <Alert variant="danger">{error}</Alert>}
             <strong>Email: </strong> {currentUser.email}
@@ -31,9 +35,10 @@ export default function Dashboard() {
 
         </Card>
       </Container>
-      <div className="w-100 text-center mt-2"> 
-        <Button variant="link" onClick={handleLogout}>Logout</Button>
+      
+        <Button variant="link" onClick={handleLogout} className="shift-more">Logout</Button>
       </div>
+      <AddProject/>
     </>
   )
 }
