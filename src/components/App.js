@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Signup from "./Signup";
 import { Container } from 'react-bootstrap';
 import "./App.css";
@@ -6,23 +6,20 @@ import { AuthProvider } from "./contexts/AuthContext";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import Navbar from "./Navbar";
+import {Form} from 'react-bootstrap';
 
 function App() {
+
+
   return (
 
     <div className="App">
-      <Router>
-        <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Navbar/>} />
-          </Routes>
-        </AuthProvider>
-      </Router> 
       <Container className="d-flex align-items-center"
       style={{ minHeight: "100vh"}}>
         <div className="w-100" style={{maxWidth: '30rem', maxHeight: ''}}>
@@ -37,8 +34,10 @@ function App() {
               </Routes>
             </AuthProvider>
           </Router>
+          
         </div>
       </Container>
+
     </div>
   )
 }

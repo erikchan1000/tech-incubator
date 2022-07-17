@@ -31,3 +31,76 @@ a {
 label {
   font-size: 2vh;
 }
+
+.test {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0;
+}
+
+.project-summary {
+  width: 100%;
+  top: 10vh;
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center !important;
+  max-width: 100% !important;
+}
+
+.shift-right {
+  position: relative;
+  top: 10vh;
+  margin-top: 10px;
+}
+
+
+.shift-more {
+  position: absolute !important;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+}
+
+
+.increase-width {
+  width: 100% !important;
+}
+
+.dashboard {
+  position: fixed !important;
+  left: 0vw !important;
+  right: 0vw !important;
+  top: 0vh !important;
+  bottom: 0vh !important;
+  justify-content: center !important;
+}
+
+.row {
+  align-self: flex-end !important;
+}
+
+.test-2 {
+  display: flex;
+}
+
+.margin-top {
+  margin-top: 1em !important;
+}
+
+p{
+  font-weight: bold !important;
+}
+
+.width-200 {
+  width: 200px !important;
+}
