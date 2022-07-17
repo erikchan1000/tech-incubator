@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Signup from "./Signup";
 import { Container } from 'react-bootstrap';
 import "./App.css";
@@ -12,8 +12,11 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import Navbar from "./Navbar";
+import {Form} from 'react-bootstrap';
 
 function App() {
+
+
   return (
 
     <div className="App">
@@ -31,8 +34,10 @@ function App() {
               </Routes>
             </AuthProvider>
           </Router>
+          
         </div>
       </Container>
+
     </div>
   )
 }

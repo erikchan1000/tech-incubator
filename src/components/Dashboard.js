@@ -3,7 +3,6 @@ import {Card, Button, Alert, Container} from 'react-bootstrap';
 import {useAuth} from './contexts/AuthContext';
 import {Link, useNavigate} from 'react-router-dom';
 import ListProjects from './ListProjects';
-import AddProject from './AddProject';
 
 export default function Dashboard() {
   const [error, setError] = useState(null);
@@ -38,7 +37,6 @@ export default function Dashboard() {
       
         <Button variant="link" onClick={handleLogout} className="shift-more">Logout</Button>
       </div>
-      <AddProject/>
     </>
   )
 }
