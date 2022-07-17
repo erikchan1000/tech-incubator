@@ -9,7 +9,8 @@ export default function AddProject() {
     const subLink = ""
     const isCompleted = "Incomplete"
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
 
         if (company === '') {
             return
@@ -24,6 +25,7 @@ export default function AddProject() {
             console.log(response)
             console.log(desc)
             console.log(company)
+            console.log(projectCollection)
     }).catch(error => {
         console.log(error)
     })
